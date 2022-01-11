@@ -141,15 +141,15 @@ body {
 }
 
 .header-link.current::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
   content: '';
   width: 48px;
   height: 4px;
   background: #2196f3;
   border-radius: 2px;
   display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
 }
 
@@ -316,25 +316,6 @@ body {
   letter-spacing: 0.03em;
   font-weight: 700;
   margin-bottom: 50px;
-}
-.thumb {
-  position: relative;
-}
-.label {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
-  padding: 27px;
-  background: rgba(47, 48, 58, 0.8);
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 /* Team */
@@ -640,6 +621,9 @@ body {
   border-radius: 4px;
   border: 1px solid transparent;
   /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -699,6 +683,7 @@ body {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .modal {
   position: absolute;
@@ -725,4 +710,54 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid #0000001a;
+}
+
+.thumb {
+  position: relative;
+}
+.label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  padding: 27px;
+  background: rgba(47, 48, 58, 0.8);
+  color: #d8c6c6;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.thumb-portfolio {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  max-width: 370px;
+  opacity: 0;
+}
+.project-link:hover .overlay,
+.project-link:focus .overlay {
+  opacity: 1;
+}
+
+:hover,
+:focus {
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
