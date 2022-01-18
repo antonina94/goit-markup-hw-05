@@ -442,13 +442,12 @@ body {
 .clients-link {
   width: 170px;
   height: 92px;
-  background-color: ;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition-property: background-color;
+  transition-property: background-color, border-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
@@ -626,7 +625,7 @@ body {
   cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: none;
   transition-property: background-color, color, box-shadow;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -650,8 +649,8 @@ body {
   font-family: inherit;
   padding: 6px 22px;
   border-radius: 4px;
-  border: 1px solid transparent;
-  transition-property: color, background-color, border, box-shadow;
+  border: none;
+  transition-property: color, background-color, box-shadow;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
@@ -660,7 +659,6 @@ body {
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-  border: 1px solid transparent;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
